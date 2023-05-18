@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* --------------------------------------navbar----------------------------------------------- */
+nav .menu ul{
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    list-style: none;
+    
+}
+nav .menu ul li a{
+   
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+nav .menu a:hover{
+    text-decoration: underline;
+}
+.toggle-button{
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+}
+
+
+nav{
+    width: 100%;
+    height: 15vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+/* --------------------for changing the background images and main screen --------------------------*/
+#selection-top{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)), url(../images/taj\ mahal.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: change 50s infinite;
+}
+/* -------------------------for heading content -------------------------------*/
+main{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+section h3{
+    font-size: 35px; font-weight: 200; letter-spacing: 3px;
+    text-shadow: 2px 2px 3px black;
+}
+section h1{
+    margin: 30px 0 20px 0;
+    font-size: 35px; font-weight: 200; letter-spacing: 3px;
+    text-shadow: 2px 2px 3px black;
+    text-transform: uppercase;
+}
+section p{
+    font-size: 25px;
+    word-spacing: 2px;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 3px black;
+}
+
+/* ------------------------------------------for grid layout --------------------------------------*/
+#grid-container {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-gap: 20px; 
+  }
+  
+  .grid-item {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .grid-item h3 {
+    margin-top: 10px;
+  }
+  
+  .grid-item p {
+    margin-top: 10px;
+  }
+  .grid-item:hover{
+    background-color: grey;
+    color: white;
+  }
+
+  /*---------------------------------- footer-------------------------------- */
+
+  .footer{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #contact-me{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+  }
+
+  .btn{
+    width: 10rem;
+    height: 30px;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    border: 2px;
+    border-radius: 4px;
+
+  }
+  .btn:hover{
+    background-color: gray;
+    color: whitesmoke;
+  }
+
+  .footer-link{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+  }
+  .footer-link:hover{
+    text-decoration: underline;
+  }
+  .copyright{
+    font-size: 20px;
+    padding: 20px;
+  }
+
+/* ---------------------------------for responsive--------------------------------------- */
+@media(max-width:700px){
+ .logo{
+    padding: 20px;
+ }
+ main{
+    padding: 20px;
+ }
+ .toggle-button{
+    display: flex;
+ }
+ nav .menu{
+    display: none;
+    width: 100%;
+ }
+ nav{
+    flex-direction: column;
+    align-items: flex-start;
+ }
+ nav .menu ul {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+ }
+ .menu li{
+    text-align: center;
+ }
+ .menu li a{
+    padding: .5rem 1rem;
+ }
+.menu.active{
+    display: flex;
+}
+.copyright{
+    font-size: 15px;
+  }
+ 
+}
+
+
+
+/* ----------------animation----------------- */
+
+
+
+@keyframes change {
+    0%
+    {
+        background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)),url(../images/taj\ mahal.jpg);
+    }
+    10%
+    {
+        background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)),url(../images/victoria\ memorial.jpg);
+    }
+    20%
+    {
+        background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)),url(../images/red\ fort.jpg);
+    }
+    30%
+    {
+        background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)),url(../images/ajanta\ ellora\ caves.jpg);
+    }
+    40%
+    {
+        background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)),url(../images/nalanda\ university.jpg);
+    }
+    50%
+    {
+        background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)),url(../images/janter\ manter.jpg);
+    }
+    60%
+    {
+        background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)), url(../images/hawa\ mahal.jpg);
+    }
+    75%
+    {
+        background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)),url(../images/hampi.jpg);
+    }
+    85%
+    {
+        background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)),url(../images/golkonda\ fort.jpg);
+    }
+    100%
+    {
+        background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)),url(../images/elephanta\ caves.jpg);
+    }
+}
